@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class telaLogs extends javax.swing.JFrame {
+public class TelaLogs extends javax.swing.JFrame {
 
     public JButton getjButton1() {
         return jButton_save;
@@ -18,7 +18,7 @@ public class telaLogs extends javax.swing.JFrame {
         this.jButton_save = jButton1;
     }
     
-    public telaLogs() {
+    public TelaLogs() {
         initComponents();
     }
 
@@ -30,28 +30,28 @@ public class telaLogs extends javax.swing.JFrame {
         this.Records = Records;
     }
 
-    public JMenuBar getjMenuBar1() {
-        return jMenuBar1;
+    public JButton getjButton_openRecord() {
+        return jButton_openRecord;
     }
 
-    public void setjMenuBar1(JMenuBar jMenuBar1) {
-        this.jMenuBar1 = jMenuBar1;
+    public void setjButton_openRecord(JButton jButton_openRecord) {
+        this.jButton_openRecord = jButton_openRecord;
     }
 
-    public JMenu getjMenu_file() {
-        return jMenu_file;
+    public JButton getjButton_returnMenu() {
+        return jButton_returnMenu;
     }
 
-    public void setjMenu_file(JMenu jMenu_file) {
-        this.jMenu_file = jMenu_file;
+    public void setjButton_returnMenu(JButton jButton_returnMenu) {
+        this.jButton_returnMenu = jButton_returnMenu;
     }
 
-    public JMenu getjMenu_menu() {
-        return jMenu_menu;
+    public JButton getjButton_save() {
+        return jButton_save;
     }
 
-    public void setjMenu_menu(JMenu jMenu_menu) {
-        this.jMenu_menu = jMenu_menu;
+    public void setjButton_save(JButton jButton_save) {
+        this.jButton_save = jButton_save;
     }
 
     public JPanel getjPanel1() {
@@ -83,129 +83,134 @@ public class telaLogs extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea_viewRecords = new javax.swing.JTextArea();
         Records = new javax.swing.JLabel();
         jButton_save = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu_menu = new javax.swing.JMenu();
-        jMenu_file = new javax.swing.JMenu();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea_viewRecords = new javax.swing.JTextArea();
+        jButton_returnMenu = new javax.swing.JButton();
+        jButton_openRecord = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 102));
-
-        jTextArea_viewRecords.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea_viewRecords.setColumns(20);
-        jTextArea_viewRecords.setForeground(new java.awt.Color(0, 0, 0));
-        jTextArea_viewRecords.setRows(5);
-        jTextArea_viewRecords.setEnabled(false);
-        jScrollPane1.setViewportView(jTextArea_viewRecords);
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         Records.setFont(new java.awt.Font("MS PGothic", 0, 36)); // NOI18N
         Records.setForeground(new java.awt.Color(255, 255, 255));
         Records.setText("Records");
 
-        jButton_save.setBackground(new java.awt.Color(0, 51, 204));
-        jButton_save.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
+        jButton_save.setBackground(new java.awt.Color(0, 153, 204));
+        jButton_save.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jButton_save.setForeground(new java.awt.Color(255, 255, 255));
         jButton_save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salve-.png"))); // NOI18N
-        jButton_save.setText("Save");
+        jButton_save.setText("  Save");
+        jButton_save.setToolTipText("");
         jButton_save.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton_save.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton_save.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton_save.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jButton_save.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jButton_save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_saveActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/digitando (3).png"))); // NOI18N
+        jTextArea_viewRecords.setEditable(false);
+        jTextArea_viewRecords.setBackground(new java.awt.Color(51, 51, 51));
+        jTextArea_viewRecords.setColumns(20);
+        jTextArea_viewRecords.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea_viewRecords.setRows(5);
+        jTextArea_viewRecords.setEnabled(false);
+        jScrollPane1.setViewportView(jTextArea_viewRecords);
+
+        jButton_returnMenu.setBackground(new java.awt.Color(0, 153, 204));
+        jButton_returnMenu.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton_returnMenu.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_returnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back (2).png"))); // NOI18N
+        jButton_returnMenu.setText("  Return");
+        jButton_returnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jButton_openRecord.setBackground(new java.awt.Color(0, 153, 204));
+        jButton_openRecord.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jButton_openRecord.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_openRecord.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/open-folder-with-document.png"))); // NOI18N
+        jButton_openRecord.setText("  Open record");
+        jButton_openRecord.setToolTipText("");
+        jButton_openRecord.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton_openRecord.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_openRecord.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jButton_openRecord.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jButton_openRecord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_openRecordActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(319, 319, 319)
-                        .addComponent(jButton_save, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(36, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Records)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jButton_openRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(154, 154, 154)
+                            .addComponent(jButton_save, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Records)
-                                .addGap(265, 265, 265)
-                                .addComponent(jLabel1))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(jButton_returnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Records, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap()
+                .addComponent(jButton_returnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(Records, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton_save)
-                .addGap(103, 103, 103))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_openRecord)
+                    .addComponent(jButton_save))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
-
-        jMenuBar1.setBackground(new java.awt.Color(0, 0, 102));
-
-        jMenu_menu.setBackground(new java.awt.Color(255, 255, 255));
-        jMenu_menu.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu_menu.setText("Menu");
-        jMenuBar1.add(jMenu_menu);
-
-        jMenu_file.setBackground(new java.awt.Color(255, 255, 255));
-        jMenu_file.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu_file.setText("Open records");
-        jMenu_file.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu_fileActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(jMenu_file);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu_fileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu_fileActionPerformed
-   
-    }//GEN-LAST:event_jMenu_fileActionPerformed
+    private void jButton_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_saveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_saveActionPerformed
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new telaLogs().setVisible(true);
-            }
-        });
-    }
+    private void jButton_openRecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_openRecordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_openRecordActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Records;
+    private javax.swing.JButton jButton_openRecord;
+    private javax.swing.JButton jButton_returnMenu;
     private javax.swing.JButton jButton_save;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenu_file;
-    private javax.swing.JMenu jMenu_menu;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea_viewRecords;
