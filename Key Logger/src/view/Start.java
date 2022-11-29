@@ -4,9 +4,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class TelaInicial extends javax.swing.JFrame {
+public class Start extends javax.swing.JFrame {
     
-    public TelaInicial() {
+    public Start() {
         initComponents();
     }
     
@@ -43,6 +43,11 @@ public class TelaInicial extends javax.swing.JFrame {
         jButton_start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botao-play (1).png"))); // NOI18N
         jButton_start.setText("Start");
         jButton_start.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton_start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_startActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -93,7 +98,7 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addComponent(KeyLogger)
                 .addGap(81, 81, 81)
                 .addComponent(jButton_start)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                 .addComponent(developer)
                 .addGap(29, 29, 29))
         );
@@ -106,12 +111,16 @@ public class TelaInicial extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_startActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_startActionPerformed
 
     public JLabel getKeyLogger() {
         return KeyLogger;
