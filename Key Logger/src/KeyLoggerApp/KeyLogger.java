@@ -1,6 +1,6 @@
 package KeyLoggerApp;
 
-import control.TelaController;
+import control.Controller;
 import view.TelaInicial;
 import view.TelaLogs;
 
@@ -10,7 +10,7 @@ public class KeyLogger {
         TelaInicial menu = new TelaInicial();
         TelaLogs logs = new TelaLogs();
         
-        TelaController tc = new TelaController(menu, logs);
+        Controller tc = new Controller(menu, logs);
 
         tc.initController();
     }
