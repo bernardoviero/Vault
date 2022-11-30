@@ -3,7 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Program%20Files/Projetos/KeyLogger/Key%20Logger/src/view/TelaLogs.java</file>
+            <file>file:/E:/Program%20Files/Projetos/KeyLogger/Key%20Logger/src/KeyLoggerApp/KeyLogger.java</file>
+            <file>file:/E:/Program%20Files/Projetos/KeyLogger/Key%20Logger/src/model/ControlKeyBoard.java</file>
             <file>file:/E:/Program%20Files/Projetos/KeyLogger/Key%20Logger/src/control/Controller.java</file>
         </group>
     </open-files>

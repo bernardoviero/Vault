@@ -1,6 +1,5 @@
 package control;
 
-import model.ControlKeyBoard;
 import view.Start;
 import view.Search;
 
@@ -20,7 +19,8 @@ public class Controller {
     }
 
     private void viewLogs() {
-        ControlKeyBoard CB = new ControlKeyBoard();
+//        KeyboardRecord Kb = new KeyboardRecord();
+//        Kb.KeyboardRecord();    
         
         searchLogs.setVisible(true);
         menu.setVisible(false);
