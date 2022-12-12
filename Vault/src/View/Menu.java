@@ -168,7 +168,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField_conta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_inserir, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_visualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -219,33 +219,17 @@ public class Menu extends javax.swing.JFrame {
         return jTextField_conta;
     }
 
-    public void setjTextField_conta(JTextField jTextField_conta) {
-        this.jTextField_conta = jTextField_conta;
-    }
-
     public JTextField getjTextField_email() {
         return jTextField_email;
-    }
-
-    public void setjTextField_email(JTextField jTextField_email) {
-        this.jTextField_email = jTextField_email;
     }
 
     public JPasswordField getjPasswordField_senha() {
         return jPasswordField_senha;
     }
 
-    public void setjPasswordField_senha(JPasswordField jPasswordField_senha) {
-        this.jPasswordField_senha = jPasswordField_senha;
-    }
-
 
     public JTextField getjTextField_usuario() {
         return jTextField_usuario;
-    }
-
-    public void setjTextField_usuario(JTextField jTextField_usuario) {
-        this.jTextField_usuario = jTextField_usuario;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -266,4 +250,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_email;
     private javax.swing.JTextField jTextField_usuario;
     // End of variables declaration//GEN-END:variables
+
+    public Object getjTextField_senha() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

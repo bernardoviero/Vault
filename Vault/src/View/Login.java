@@ -184,7 +184,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(45, 45, 45)
                 .addComponent(Usuário2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(Usuário)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

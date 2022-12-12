@@ -26,6 +26,11 @@ public class ViewController {
     }
 
     private void exibirContas() {
+        menu.getjTextField_usuario().setText("");
+        menu.getjTextField_email().setText("");
+        menu.getjPasswordField_senha().setText("");
+        menu.getjTextField_conta().setText("");
+        
         contas.setVisible(true);
         login.setVisible(false);
         menu.setVisible(false);

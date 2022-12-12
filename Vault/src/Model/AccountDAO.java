@@ -73,7 +73,7 @@ public class AccountDAO {
     }
 
     public int deletarConta(Account conta) throws SQLException {
-        String delete = "DELETE FROM Conta WHERE id_conta = ?;";
+        String delete = "DELETE FROM Conta WHERE ID = ?;";
         con = new ConnectionFactory().getConnection();
         PreparedStatement pst = null;
         try {
@@ -102,7 +102,7 @@ public class AccountDAO {
     }
     public void editarConta(Account conta) throws SQLException{
         String update = "UPDATE Conta set plataforma = ?, email = ?, usuario = ?, senha = ?" +
-                "where id_conta = ?;";
+                "where ID = ?;";
         con = new ConnectionFactory().getConnection();
         try{
             PreparedStatement pst = con.prepareStatement(update);
